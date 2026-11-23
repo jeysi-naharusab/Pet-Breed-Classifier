@@ -1,0 +1,7 @@
+timm
+Pillow
+numpy
+scikit-learn
+matplotlib
+onnx
+onnxruntime
