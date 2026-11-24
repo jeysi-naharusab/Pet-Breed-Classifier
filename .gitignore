@@ -1,5 +1,8 @@
 data/
-checkpoints/
+checkpoints/*
+!checkpoints/classes.json
+!checkpoints/pet-breed-classifier.onnx
+!checkpoints/pet-breed-classifier.onnx.data
 venv/
 .venv/
 __pycache__/

@@ -1,0 +1,9 @@
+{
+  "name": "Pet Breed Classifier",
+  "short_name": "Pet ID",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f4ed",
+  "theme_color": "#246b52",
+  "icons": []
+}

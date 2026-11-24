@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#246b52">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <title>Pet Breed Classifier</title>
+  <style>
+    :root { font-family: system-ui, sans-serif; color: #18302a; background: #f7f4ed; }
+    body { margin: 0; }
+    main { max-width: 760px; margin: 0 auto; padding: 24px; }
+    h1 { margin-top: 0; }
+    .upload { border: 2px dashed #91aa9f; border-radius: 16px; padding: 20px; background: white; }
+    #preview { display: none; max-width: 100%; max-height: 360px; border-radius: 12px; margin-top: 16px; }
+    .actions { display: flex; gap: 12px; margin-top: 16px; }
+    button { border: 0; border-radius: 10px; padding: 12px 18px; background: #246b52; color: white; cursor: pointer; }
+    button:disabled { opacity: .55; cursor: wait; }
+    form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
+    label { display: grid; gap: 6px; font-weight: 700; }
+    input { border: 1px solid #a9b8b2; border-radius: 8px; padding: 10px; font-size: 16px; }
+    #status { min-height: 24px; margin-top: 12px; }
+    @media (max-width: 560px) { form { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Pet Breed Detector</h1>
+    <section class="upload">
+      <label for="photo">Upload a pet photo</label>
+      <input id="photo" type="file" accept="image/*" capture="environment">
+      <img id="preview" alt="Selected pet">
+    </section>
+    <div class="actions">
+      <button id="detect" type="button" disabled>Detect Breed</button>
+    </div>
+    <p id="status" role="status"></p>
+    <form>
+      <label>Species <input id="species" name="species"></label>
+      <label>Breed <input id="breed" name="breed"></label>
+      <label>Color <input id="color" name="color"></label>
+      <label>Size <input id="size" name="size"></label>
+    </form>
+  </main>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
